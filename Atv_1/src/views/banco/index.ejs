@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>API Bancos Brasileiros</title>
+<link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<br/><br/><br/>
+<h2>Bancos Brasileiros</h2>
+<br/>
+<table class="table table-dark">
+<thead>
+<tr>
+<th scope="col">COMPE</th>
+<th scope="col">ShortName</th>
+<th scope="col">Document</th>
+<th scope="col">Type</th>
+<th scope="col">URL</th>
+</tr>
+</thead>
+<tbody>
+<% if (banco.length > 0) { %>
+<% for(var i = 0; i < banco.length; i++) {%> 
+</tr>
+<th scope="row"><%= banco[i].COMPE %></th>
+<td><h4 ><%= banco[i].ShortName %></h4></td>
+<td><%= banco[i].Document %></td>
+<td><%= banco[i].Type %></td>
+<td><%= banco[i].Url %></td>
+</tr>
+<% } %>
+<% } %>
+</div>
+</body>
+</html>
